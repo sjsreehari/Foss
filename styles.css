@@ -102,39 +102,135 @@ nav img {
     transition: 1s;
 }
 
-.elements .fa {
-    display: none;
+
+.course{
+    width: 80%;
+    margin : auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+.course h1{margin: 0; 
+    padding: 0; 
+    line-height: 1;
+    display: inline-block;
+}
+.course p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.colmn p{
+    color: #000000;
+}
+.row{
+    display: flex;
+    margin top: 5%;
+    justify-content: space-between;
+    
+}
+.colmn{
+    flex-basis:31%; 
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.colmn h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px solid;
+}
+.colmn:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2) ;
+
+}
+@media (max-width:700px){
+    .row{
+        flex-direction: column;
+    }
 }
 
-@media (max-width: 700px) {
-    .textbox h1 {
-        font-size: 20px;
-    }
 
-    .elements ul li {
-        display: block;
-    }
 
-    .elements {
-        position: absolute;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
-    }
 
-    .elements .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
 
-    .elements ul {
-        padding: 30px;
-    }
+
+
+/* Basic styling for the section */
+.image-section {
+    text-align: center;
+    margin-top: 50px;
 }
+
+.image-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.image-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-item {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.image-item .image-text {
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 100%;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Hover effect */
+.image-item:hover img {
+    opacity: 0.5;
+    background-color: red;
+}
+
+.image-item:hover .image-text {
+    bottom: 0;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+
+
+
