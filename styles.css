@@ -128,8 +128,7 @@ nav img {
 .row{
     display: flex;
     margin top: 5%;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 .colmn{
     flex-basis:31%; 
@@ -228,9 +227,6 @@ nav img {
 
 
 
-
-
-------------------------------------------------------------------------
 
 
 
