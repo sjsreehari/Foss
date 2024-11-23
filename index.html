@@ -1,104 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOSS - MCE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="Jaydipsinh Solanki">
+
+    <title>FOSS - Marian Engineering College</title>
+    
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+
 </head>
 <body>
+    
     <section class="header">
         <nav>
-            <a href="index.html"><img src="image.png" alt="Logo"></a>
-            <div class="elements">
-               
+            <a href="https://fossunited.org/"><img src="images\image.png" id="logo-img"></a>
+
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">COURSE</a></li>
-                    <li><a href="">BLOG</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="">ABOUT</li>
+                    <li><a href="">EVENTS</a></li>
+                    <li><a href="">COMMUNITY</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
+            </div> 
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+       
+        <div class="text-box">
+            <h1>Empowering Open Innovation</h1>
+            <p>Welcome to FOSS Marian Engineering College!<br> We are a passionate community of innovators, thinkers, and doers. Explore, contribute, and grow with us!</p>
+            
+            <a href="Admission_page.html" class="hero-btn">Join Us</a>
+        </div>
+    </section>
+
+    <!--Second part-->
+
+
+    <section class="course" id="course_call">
+        <h1>Why FOSS?</h1>
+        <p>Free and Open Source Software (FOSS) is more than just technology—it's a movement that encourages collaboration, transparency, and innovation. Here's why FOSS matters:</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h2>Collaboration</h2>
+                <p>FOSS thrives on teamwork. Whether you're learning, building, or contributing, you'll connect with like-minded individuals worldwide to create impactful solutions.</p>
+            </div>
+
+            <div class="course-col">
+                <h2>Innovation</h2>
+                <p>FOSS gives you the liberty to modify, share, and enhance software without limitations. Explore endless possibilities and tailor solutions to your needs</p>
+            </div>
+
+            <div class="course-col">
+                <h2>Accesibility</h2>
+                <p>Cost-effective and open to everyone, FOSS makes cutting-edge technology accessible for students, developers, and organizations alike.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="course-col">
+                <h2>Transparency</h2>
+                <p>With FOSS, the source code is open for everyone to review, ensuring complete transparency and trust in the software you use and develop.</p>
             </div>
             
-        </nav>
-        <div class="textbox">
-            <h1>Welcome to the FOSS Campus</h1>
-            <p>Free and Open Source Software (FOSS) empowers individuals and organizations by providing the freedom to use, modify, and distribute software. At our FOSS campus, we focus on fostering a collaborative environment where students and developers can learn, contribute, and grow by engaging with open-source projects and communities.</p>
-            <a href="" class="btn">Visit us to know more</a>
+            <div class="course-col">
+                <h2>Community</h2>
+                <p>Join a global network of developers, contributors, and enthusiasts who support each other in creating and maintaining open-source projects.</p>
+            </div>
+            
+            <div class="course-col">
+                <h2>Sustainability</h2>
+                <p>FOSS promotes sustainable development by reducing dependencies on proprietary software, ensuring long-term usability and adaptability.</p>
+            </div>
+            
         </div>
     </section>
 
 
 
-<section class="course">
-    <h1>Discover the Events at FOSS</h1>
-    <p>kjdkf;wejfjfffffffffffffffffffffffffffffff</p>
-    <div class="row">
-        <div class="colmn">
-            <h3>Code Café</h3>
-            <p>Code Café is a weekly gathering where developers, enthusiasts, and learners exchange ideas, share their coding journeys, and showcase their achievements. It’s the perfect space to fuel your creativity and stay inspired.</p>
+
+
+
+    <!--Club Section-->
+    <section class="club">
+        <div class="full">
+            <div class="left">
+                <div class="text">
+                    <h1>FOSS Clubs</h1>
+                    <p>FOSS Club by FOSS United is an initiative to promote 
+                        <br>free and open-source culture and collaboration among students through events, 
+                        <br>workshops, and networking in college campuses.
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="index.html"><button class="button-28" role="button">Join our Club</button></a>
+                    <a href="https://fossunited.org/"><button class="button-28" role="button">Find more</button></a>
+                </div>
+            </div>
+            <div class="image">
+                <img src=images\club.svg>
         </div>
-        <div class="colmn">
-            <h3>Hack Hours</h3>
-            <p>Hack Hours offers a dedicated time to collaborate with project maintainers and contributors. During these weekly virtual meet-ups, participants review ongoing projects, brainstorm ideas, and discuss technical challenges with guidance from experienced mentors.</p>
+    </section>
+    
+
+
+    <!-- addistion java section -->
+
+    <section class="impact-section">
+        <div class="impact-left">
+            <h1>The Impact of FOSS United</h1>
+            <p>
+                                           
+            </p>
+            <p>
+                Over the past year, our community has made a significant impact by helping students, mentors, and facilitators gain deeper insights into the learning ecosystem. Through various initiatives, we’ve empowered individuals to upskill themselves, enhance their knowledge, and prepare for future challenges. By creating a space for active learning, we've fostered personal and professional growth.
+            </p>
+            
+            <p>
+                Our community’s focus on hands-on experiences and real-world applications has allowed participants to gain practical skills that are highly relevant to their careers. This collaborative environment has strengthened connections and inspired continuous learning, helping individuals stay competitive and relevant in an ever-evolving world.
+            </p>
+            
         </div>
-        <div class="colmn">
-            <h3>Open Circles</h3>
-            <p>Open Circles bring together people with shared interests in open-source technology. These informal learning groups dive into topics ranging from web development to cybersecurity, providing a collaborative environment to explore and grow.</p>
+        <div class="impact-stats">
+            <div class="stat">
+                <p class="stat-number animate-number">250</p>
+                <p class="stat-label">Members</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">30</p>
+                <p class="stat-label">Colleges</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">100</p>
+                <p class="stat-label">Companies</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">40</p>
+                <p class="stat-label">Communities</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">500</p>
+                <p class="stat-label">Events</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">100</p>
+                <p class="stat-label">Open-Source Contributions</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">20</p>
+                <p class="stat-label">Internships</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">5</p>
+                <p class="stat-label">Full-Time Jobs Created</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number animate-number">3</p>
+                <p class="stat-label">Years of Work</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="colmn">
-            <h3>Code Café</h3>
-            <p>Code Café is a weekly gathering where developers, enthusiasts, and learners exchange ideas, share their coding journeys, and showcase their achievements. It’s the perfect space to fuel your creativity and stay inspired.</p>
+    </section>
+    
+        
+    
+<!-- ecosystem -->
+<section class="foss-club">
+    <div class="foss-full">
+        <div class="foss-image">
+            <img src="images\ecosystem.webp" alt="FOSS Club Image">
         </div>
-        <div class="colmn">
-            <h3>Hack Hours</h3>
-            <p>Hack Hours offers a dedicated time to collaborate with project maintainers and contributors. During these weekly virtual meet-ups, participants review ongoing projects, brainstorm ideas, and discuss technical challenges with guidance from experienced mentors.</p>
-        </div>
-        <div class="colmn">
-            <h3>Open Circles</h3>
-            <p>Open Circles bring together people with shared interests in open-source technology. These informal learning groups dive into topics ranging from web development to cybersecurity, providing a collaborative environment to explore and grow.</p>
+        <div class="foss-right">
+            <div class="text">
+                <h1>Open-Source Ecosystem of FOSS</h1>
+                <p>
+                    FOSS Clubs, an initiative by FOSS United, are designed to cultivate a thriving ecosystem of free and open-source software enthusiasts within educational institutions. These clubs provide a collaborative platform for students to explore the world of open-source technologies, engage in hands-on workshops, and participate in events that highlight the importance of software freedom. Through these interactions, students gain valuable skills in coding, software development, and project management while contributing to impactful open-source projects. 
+                    <br><br>
+                    Beyond technical knowledge, FOSS Clubs foster a sense of community and collaboration, where students can network with like-minded individuals, share resources, and support each other’s growth. The initiative not only strengthens academic learning but also encourages students to actively contribute to global open-source communities, equipping them with real-world skills that are in high demand within the tech industry. By joining these clubs, students open doors to a world of possibilities, including internships, mentorships, and career opportunities, all while helping to drive the future of open-source technology.
+                </p>
+                
+            </div>
         </div>
     </div>
 </section>
-<section class="image-section">
-    <h1>Heading</h1>
-    <h3>Some text below the heading</h3>
-    <div class="image-container">
-        <div class="image-item">
-            <img src="image1.png" alt="Image 1">
-            <p class="image-text">Image 1 Text</p>
+
+  
+      
+
+    <!--Facilities Section-->
+
+    <section class="facilities">
+        <h1> Our Projects</h1>
+        <p>Projects made by FOSS Club members of Marian Engineering College</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images\p1.jpg" alt="">
+                <h3>E-Voting System</h3>
+                <p>A secure platform where users can cast votes in elections, ensuring transparency, security, and accuracy. This can be used for student elections, local elections, or any voting process.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="images\p2.webp" alt="">
+                <h3>Student Management System</h3>
+                <p>A web-based system to manage student records, including personal details, academic performance, attendance, and other relevant data.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="images\p3.avif" alt="">
+                <h3>Library Management System</h3>
+                <p>A system to manage books, members, and transactions in a library. It can automate tasks like issuing/returning books, managing inventory, and generating reports.</p>
+            </div>
         </div>
-        <div class="image-item">
-            <img src="image1.png" alt="Image 2">
-            <p class="image-text">Image 2 Text</p>
-        </div>
-        <div class="image-item">
-            <img src="image1.png" alt="Image 3">
-            <p class="image-text">Image 3 Text</p>
-        </div>
-    </div>
-</section>
+        </section>
 
+        
 
+         <!--Footer-->
+         <section class="footer">
+             <h4>About Us</h4>
+            <p>Empowering innovation and collaboration through Free and Open Source Software (FOSS).<br> Building a brighter future with technology and community-driven solutions..</p>
+             <p id="copyright">Made By &#10084; <a href="https://www.linkedin.com/in/sreeharisj/">Sreehari S J</a> </p>
+         </section>
 
-
-
-
-
-
-
-
-<section>
-    <h1></h1>
-</section>
+    <!--Javascript is Start-->
+    <script src="javascript/main_script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
 
+    
+    
+</html>
