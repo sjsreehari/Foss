@@ -40,43 +40,52 @@ body{
         border-radius: 1px !important;
     }
 
-.header{
+/* General styles for desktop */
+.header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url(background.png);
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url(background.png);
     background-position: center;
     background-size: cover;
     position: relative;
 }
-nav{
+
+nav {
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
 }
-nav img{
+
+nav img {
     width: 75px;
 }
-.nav-links{
+
+.nav-links {
     flex: 1;
     text-align: right;
-    
 }
-.nav-links ul li{
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    
 }
-.nav-links a{
+
+.nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
-.nav-links ul li::after{
+
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -84,33 +93,34 @@ nav img{
     display: block;
     margin: auto;
     transition: 0.5s;
-    
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
-    
 }
-.text-box{
+
+.text-box {
     width: 90%;
     color: #fff;
-    position:absolute;
+    position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
-.text-box h1{
+
+.text-box h1 {
     font-size: 62px;
     font-weight: bold;
-
 }
-.text-box p{
+
+.text-box p {
     margin: 10px 0 40px;
     font-size: 18px;
     color: #fff;
-    
 }
-.hero-btn{
+
+.hero-btn {
     display: inline-block;
     text-decoration: none;
     color: rgb(254, 247, 247);
@@ -122,15 +132,83 @@ nav img{
     cursor: pointer;
     border-radius: 5px;
 }
-.hero-btn:hover{
+
+.hero-btn:hover {
     color: black;
     border: 2px solid rgb(0, 0, 0);
-    background:rgb(249, 249, 245);
+    background: rgb(249, 249, 245);
     transition: 0.5s;
 }
 
-.icon{
-    display:none;
+/* Mobile-specific styles */
+.icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row-reverse; /* Position the menu icon on the right */
+        position: relative;
+    }
+
+    nav img {
+        width: 50px; /* Smaller logo */
+    }
+
+    .icon {
+        display: block; /* Show icons */
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .open-icon {
+        display: block; /* Show open icon by default */
+    }
+
+    .close-icon {
+        display: none; /* Hide close icon initially */
+    }
+
+    .nav-links {
+        display: none; /* Hide menu links by default */
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgba(4, 9, 30, 0.95);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+
+    .text-box {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-box h1 {
+        font-size: 48px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
 }
 
 /* Course */
@@ -175,6 +253,57 @@ h3{
     box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
 }
 
+@media (max-width: 1024px) {
+    .course {
+        width: 90%;
+    }
+
+    .row {
+        gap: 20px;
+    }
+
+    .course-col {
+        flex-basis: 45%; /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 13px; /* Adjust paragraph text */
+        line-height: 20px;
+    }
+
+    .row {
+        gap: 10px;
+        justify-content: center; /* Center-align items for smaller screens */
+    }
+
+    .course-col {
+        flex-basis: 80%; /* Single column layout for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Further reduce heading size for mobile */
+    }
+
+    p {
+        font-size: 12px; /* Smaller text for mobile devices */
+    }
+
+    .course {
+        width: 95%; /* Maximize space for mobile screens */
+    }
+
+    .course-col {
+        padding: 15px 10px; /* Adjust padding for mobile */
+    }
+}
 
 
 
@@ -184,6 +313,7 @@ h3{
 /* this is fr clubs */
 .full {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
@@ -269,12 +399,64 @@ h3{
     height: auto;
     border-radius: 10px;
 }
+@media (max-width:700px){
+    .full{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px;
+        align-items: center;
+        padding-top: 130px;
+        padding-bottom: 100px;
+    }
+    ..buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      
+      .buttons .button-28 {
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #1A1A1A;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 13px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 40px;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        width: auto;
+        will-change: transform;
+      }
+      .full img {
+        flex: 1;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .full h1,p,{
+        align-items: center;
+      }
 
-
+      }
+}
+    
+}
 /* adiition java section */
 
 .impact-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #ffffff; /* Background color */
@@ -341,7 +523,62 @@ h1{
     margin-top: 5px; /* Add space between number and label */
 }
 
-
+@media (max-width: 700px){
+    @media (max-width: 700px) {
+        .impact-section {
+            flex-direction: column; /* Stack items vertically */
+            padding: 20px 10px; /* Adjust padding for smaller screens */
+        }
+    
+        .impact-left {
+            padding-right: 0; /* Remove padding for smaller screens */
+            margin-bottom: 20px; /* Add space below the left section */
+        }
+    
+        h1 {
+            overflow: hidden;
+            text-align: center;
+            font-size: 28px; /* Smaller heading size */
+        }
+    
+        .impact-title {
+            font-size: 20px; /* Adjust title size */
+        }
+    
+        .impact-description {
+            font-size: 14px; /* Smaller font for the description */
+            margin-bottom: 20px; /* Less margin below the description */
+        }
+    
+        .impact-stats {
+            overflow: hidden;
+            grid-template-columns: repeat(3, 1fr); /* 2 columns instead of 3 */
+            gap: 10px; /* Smaller gap */
+        }
+    
+        .stat {
+            overflow: hidden;
+            width: 80px; /* Smaller stat box */
+            height: 80px; /* Smaller stat box */
+            padding: 5px; /* Less padding */
+        }
+    
+        .stat-number {
+            overflow: hidden;
+            font-size: 20px; /* Reduce font size */
+        }
+    
+        .stat-number::after {
+            font-size: 20px; /* Match size with the number */
+        }
+    
+        .stat-label {
+            overflow: hidden;
+            font-size: 12px; /* Adjust label font size */
+        }
+    }
+    
+}
 
 
 
@@ -390,6 +627,40 @@ h1{
     height: auto;
     border-radius: 10px;
 }
+@media (max-width: 700px) {
+    .foss-full {
+        flex-direction: column; /* Stack items vertically */
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+        max-width: 100%; /* Utilize full screen width */
+        text-align: center; /* Center-align text for better readability */
+    }
+
+    .foss-right {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add spacing above */
+    }
+
+    .foss-right .text h1 {
+        font-size: 28px; /* Smaller font for the heading */
+        line-height: 1.2; /* Adjust line height for better readability */
+    }
+
+    .foss-right .text p {
+        text-align: left;
+        font-size: 13px; /* Smaller font size for paragraph */
+        line-height: 18px; /* Adjust line height */
+        padding: 0; /* Remove inner padding */
+    }
+
+    .foss-image {
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .foss-image img {
+        max-width: 80%; /* Reduce image width for smaller screens */
+        border-radius: 8px; /* Slightly smaller border-radius */
+    }
+}
 
 
 
@@ -435,6 +706,36 @@ h1{
     box-shadow: 3.5px 5px 15px 10px rgba(0, 0, 0, 0.308);
 }
 
+@media (max-width: 700px) {
+    .facilities {
+        width: 90%; /* Increase width for better use of screen space */
+        padding-top: 30px; /* Reduce padding for smaller screens */
+    }
+
+    .row12 {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .facilities-col {
+        flex-basis: 100%; /* Full width for each column */
+        margin-bottom: 50px; /* Add space between columns */
+        text-align: center; /* Center-align text for better appearance */
+    }
+
+    .facilities-col img {
+        height: auto; /* Ensure images scale proportionally */
+        border-radius: 8px; /* Slightly smaller border-radius */
+    }
+
+    .facilities-col p,
+    .facilities-col h3 {
+        padding: 5%; /* Reduce padding for better fit */
+        text-align: center; /* Center-align text */
+    }
+}
+
+
 /* Footer */
 
 .footer{
@@ -456,6 +757,45 @@ h1{
     color:white;
     text-decoration: none;
 }
+@media (max-width: 700px) {
+    .footer {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+        margin-top: 0; /* Remove negative margin for better positioning */
+        text-align: center; /* Center-align content */
+    }
+
+    .footer h4 {
+        font-size: 16px; /* Reduce font size for better fit */
+        margin-bottom: 15px; /* Adjust margin for spacing */
+        margin-top: 10px; /* Reduce top margin */
+    }
+
+    .footer a {
+        font-size: 14px; /* Smaller font size for links */
+        word-wrap: break-word; /* Wrap long links if necessary */
+    }
+}
+@media (max-width: 700px) {
+    .footer {
+        overflow: hidden;
+        height: 200px;
+        padding: 10px 10px; /* Adjust padding for smaller screens */
+        margin-top: 0; /* Remove negative margin for better positioning */
+        text-align: center; /* Center-align content */
+    }
+
+    .footer h4 {
+        font-size: 16px; /* Reduce font size for better fit */
+        margin-bottom: 15px; /* Adjust margin for spacing */
+        margin-top: 10px; /* Reduce top margin */
+    }
+
+    .footer a {
+        font-size: 14px; /* Smaller font size for links */
+        word-wrap: break-word; /* Wrap long links if necessary */
+    }
+}
+
 /* Media query for responsive */
 
 @media (max-width: 700px) {

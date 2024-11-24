@@ -40,4 +40,20 @@ function animateNumber(numberElement, endNumber, duration = 5000) {
   });
   
   
+  const navLinks = document.getElementById('navLinks');
+const openIcon = document.querySelector('.open-icon');
+const closeIcon = document.querySelector('.close-icon');
+
+function showmenu() {
+    navLinks.style.display = 'flex'; // Show the menu
+    openIcon.style.display = 'none'; // Hide the open icon
+    closeIcon.style.display = 'block'; // Show the close icon
+}
+
+function hidemenu() {
+    navLinks.style.display = 'none'; // Hide the menu
+    openIcon.style.display = 'block'; // Show the open icon
+    closeIcon.style.display = 'none'; // Hide the close icon
+}
+
   
