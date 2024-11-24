@@ -17,7 +17,6 @@
     font-family: secound;
     src: url(../Poppins/Poppins-Bold.ttf);
 }
-
 h1{
     font-family: bold;
 }
@@ -103,10 +102,11 @@ nav img {
     width: 90%;
     color: #fff;
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center exactly */
     text-align: center;
+    align-items: center;
 }
 
 .text-box h1 {
@@ -144,6 +144,7 @@ nav img {
 .icon {
     display: none;
 }
+
 
 @media (max-width: 768px) {
     nav {
@@ -253,57 +254,6 @@ h3{
     box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
 }
 
-@media (max-width: 1024px) {
-    .course {
-        width: 90%;
-    }
-
-    .row {
-        gap: 20px;
-    }
-
-    .course-col {
-        flex-basis: 45%; /* Two columns on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px; /* Adjust heading size */
-    }
-
-    p {
-        font-size: 13px; /* Adjust paragraph text */
-        line-height: 20px;
-    }
-
-    .row {
-        gap: 10px;
-        justify-content: center; /* Center-align items for smaller screens */
-    }
-
-    .course-col {
-        flex-basis: 80%; /* Single column layout for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px; /* Further reduce heading size for mobile */
-    }
-
-    p {
-        font-size: 12px; /* Smaller text for mobile devices */
-    }
-
-    .course {
-        width: 95%; /* Maximize space for mobile screens */
-    }
-
-    .course-col {
-        padding: 15px 10px; /* Adjust padding for mobile */
-    }
-}
 
 
 
@@ -399,37 +349,33 @@ h3{
     height: auto;
     border-radius: 10px;
 }
-@media (max-width:700px){
-    .full{
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding: 10px;
-        align-items: center;
-        padding-top: 130px;
-        padding-bottom: 100px;
+@media (max-width: 700px){
+    *{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
-    ..buttons {
-        display: flex;
-        gap: 10px;
+    .full{
         flex-wrap: wrap;
-      }
-      
-      .buttons .button-28 {
+        flex-direction: column;
+
+    }
+    .buttons .button-28 {
         appearance: none;
         background-color: transparent;
         border: 2px solid #1A1A1A;
-        border-radius: 15px;
+        border-radius: 10px;
         box-sizing: border-box;
         color: #3B3B3B;
         cursor: pointer;
         display: inline-block;
         font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 600;
         line-height: normal;
         margin: 0;
-        min-height: 40px;
-        padding: 16px 24px;
+        min-height: 20px;
+        padding: 10px 24px;
         text-align: center;
         text-decoration: none;
         transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
@@ -437,20 +383,12 @@ h3{
         width: auto;
         will-change: transform;
       }
-      .full img {
-        flex: 1;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .full h1,p,{
-        align-items: center;
-      }
-
-      }
-}
-    
+    .left{
+        margin: 30px;
+    }
+   .h1{
+    margin: 30px;
+    }
 }
 /* adiition java section */
 
@@ -537,7 +475,6 @@ h1{
     
         h1 {
             overflow: hidden;
-            text-align: center;
             font-size: 28px; /* Smaller heading size */
         }
     
