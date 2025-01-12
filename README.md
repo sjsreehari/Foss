@@ -1,6 +1,7 @@
 # FOSS - Marian Engineering College
 
 This is a website developed by the FOSS Club of Marian Engineering College. The site showcases the open-source ecosystem, current FOSS Club projects, and provides insight into our initiatives in the world of Free and Open Source Software (FOSS). It aims to encourage students to explore, contribute, and learn more about open-source technologies and software development.
+Watch it here https://sjsreehari.github.io/Foss/
 
 ## Table of Contents
 1. [Introduction](#introduction)
